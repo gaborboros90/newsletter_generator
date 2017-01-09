@@ -1,0 +1,30 @@
+{
+  "name": "newsletter-exporter",
+  "description": "HCOM Szeged newsletter generation app",
+  "main": "index.html",
+  "authors": [
+    "Gabor Boros"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "hotels.com",
+    "newsletter",
+    "landing"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "angular": "^1.3.10",
+    "requirejs": "^2.2.0",
+    "lodash": "~4.15.0",
+    "bootstrap": "^3.3.7"
+  }
+}
