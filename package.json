@@ -1,7 +1,7 @@
 {
-  "name": "pipelineapp",
+  "name": "newsletterexporter",
   "version": "1.0.1",
-  "description": "HCOM Szeged pipeline visualizer application",
+  "description": "HCOM Szeged landing newsletter exporter application",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,14 +9,15 @@
   "keywords": [
     "hotels.com",
     "process",
-    "jira",
-    "pipeline"
+    "email",
+    "landing",
+    "newsletter"
   ],
-  "author": "Gabor Boros, Janos Fekete",
+  "author": "Gabor Boros",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://git.epam.com/Gabor_Boros/pipelineboard.git"
+    "url": "https://git.epam.com/Gabor_Boros/landing-newsletter-exporter"
   },
   "dependencies": {
     "grunt": "0.4.2",
@@ -24,7 +25,6 @@
     "grunt-bower-install-simple": "^1.2.3",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-newer": "^1.2.0",
     "grunt-shell": "^1.3.1",

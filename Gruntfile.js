@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: './',
-                        src: ['webapp/**/*.scss', '!webapp/apps/common/lib/**/*.scss'],
+                        src: ['app/assets/style/*.scss'],
                         ext: '.css'
                     }
                 ]
