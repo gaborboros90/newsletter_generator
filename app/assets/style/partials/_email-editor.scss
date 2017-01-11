@@ -7,12 +7,17 @@
     }
 
     .panel-group {
-        background-color: $panel-background;
+        background-color: $background-group-color;
         padding: 0 10px 10px 10px;
         border-radius: 4px;
 
         .group-header {
             padding-top: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: $primary-color;
+            }
         }
 
         .panel {
