@@ -7,11 +7,6 @@ define([
     'use strict';
 
     return angular.module('newsletterExporter.appComponent', [emailEditor, emailPreview])
-        .component('neAppComponent', {
-            controller: appComponentController,
-            controllerAs: 'vm',
-            templateUrl: './components/app-component/appComponent.html',
-            bindings: {}
-        })
+        .controller('appComponentController', appComponentController)
         .name;
 });

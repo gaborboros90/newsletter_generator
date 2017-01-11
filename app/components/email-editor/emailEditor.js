@@ -10,7 +10,7 @@ define([
             controllerAs: 'vm',
             templateUrl: './components/email-editor/emailEditor.html',
             bindings: {
-                content: '='
+                model: '='
             }
         })
         .name;

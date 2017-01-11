@@ -10,7 +10,7 @@ define([
             controllerAs: 'vm',
             templateUrl: './components/email-preview/emailPreview.html',
             bindings: {
-                content: '='
+                model: '='
             }
         })
         .name;

@@ -9,6 +9,21 @@
     <title>Landing newsletter exporter</title>
 </head>
 <body data-ng-cloak>
-    <ne-app-component></ne-app-component>
+    <div class="app-component">
+        <div class="jumbotron text-center app-header row">
+            <h1>LPS newsletter generator</h1>
+            <p>Feel free to generate your own newsletter</p>
+        </div>
+        <div class="container-fluid" ng-controller="appComponentController">
+            <div class="row">
+                <div class="col-sm-6 email-editor">
+                    <email-editor model="vm.model"></email-editor>
+                </div>
+                <div class="col-sm-6 email-preview">
+                    <email-preview model="vm.model"></email-preview>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
