@@ -1,0 +1,7 @@
+@import "mixins";
+
+.email-preview {
+    .tool-header {
+        @include component-header();
+    }
+}

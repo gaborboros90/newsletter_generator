@@ -4,8 +4,13 @@
         <p>Feel free to generate your own newsletter</p>
     </div>
     <div class="container-fluid">
-        <h1>{{vm.headerText}}</h1>
-        <email-editor></email-editor>
-        <email-preview></email-preview>
+        <div class="row">
+            <div class="col-sm-6 email-editor">
+                <email-editor model="vm.model"></email-editor>
+            </div>
+            <div class="col-sm-6 email-preview">
+                <email-preview model="vm.model"></email-preview>
+            </div>
+        </div>
     </div>
 </div>
