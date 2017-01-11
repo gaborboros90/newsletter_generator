@@ -1,7 +1,26 @@
 @import "mixins";
+@import "variables";
 
 .email-editor {
     .tool-header {
         @include component-header();
+    }
+
+    .panel-group {
+        background-color: $panel-background;
+        padding: 0 10px 10px 10px;
+        border-radius: 4px;
+
+        .group-header {
+            padding-top: 10px;
+        }
+
+        .panel {
+            margin-bottom: 10px;
+
+            .panel-heading {
+                background-color: $primary-color;
+            }
+        }
     }
 }

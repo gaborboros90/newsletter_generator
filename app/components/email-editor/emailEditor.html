@@ -1,3 +1,37 @@
 <div class="bg-primary tool-header">
     <h2 class="text-center text-capitalize">Email editor <span class="glyphicon glyphicon-edit"></span></h2>
 </div>
+
+<div class="panel-group highlight-editor">
+    <h3 class="group-header">{{vm.model.highlight.title}}</h3>
+
+    <div class="panel panel-primary feature-editor">
+        <div class="panel-heading">{{vm.model.highlight.features.title}}</div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group" ng-repeat="feature in vm.model.highlight.features.featureList track by $index">
+                    <div class="col-xs-11">
+                        <input type="text" class="form-control" ng-model="feature.text">
+                    </div>
+                    <button ng-click="vm.removeHighlightFeature($index)" class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span></button>
+                </div>
+                <button ng-click="vm.addHighlightFeature()" class="btn btn-primary">Add new feature <span class="glyphicon glyphicon-plus-sign"></span></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-primary mvt-editor">
+        <div class="panel-heading">{{vm.model.highlight.mvts.title}}</div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group" ng-repeat="mvt in vm.model.highlight.mvts.mvtList track by $index">
+                    <div class="col-xs-11">
+                        <input type="text" class="form-control" ng-model="mvt.text">
+                    </div>
+                    <button ng-click="vm.removeHighlightMvt($index)" class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span></button>
+                </div>
+                <button ng-click="vm.addHighlightMvt()" class="btn btn-primary">Add new MVT <span class="glyphicon glyphicon-plus-sign"></span></button>
+            </form>
+        </div>
+    </div>
+</div>

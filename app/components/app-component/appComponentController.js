@@ -9,13 +9,18 @@ define(
             $scope.vm = {
                 model: {
                     highlight: {
+                        title: 'Highlight',
                         features: {
                             title: 'Bigger features',
-                            list: ['']
+                            featureList: [
+                                {
+                                    text: ''
+                                }
+                            ]
                         },
                         mvts: {
                             title: 'New MVT-s',
-                            list: ['']
+                            mvtList: []
                         }
                     },
                     releaseStatistics: {
