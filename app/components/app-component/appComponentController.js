@@ -8,6 +8,13 @@ define(
         return function appComponentController($scope) {
             $scope.vm = {
                 model: {
+                    header: {
+                        title: 'Header',
+                        releaseInfo: {
+                            title: 'Release number',
+                            value: '2017.R01'
+                        }
+                    },
                     highlight: {
                         title: 'Highlight',
                         features: {
@@ -54,13 +61,14 @@ define(
                         }
                     },
                     anniversaries: {
+                        title: 'Anniversaries',
                         birthdays: {
                             title: 'Birthdays',
-                            list: [],
+                            personList: []
                         },
                         landingAnniversaries: {
                             title: 'Landing anniversaries',
-                            list: []
+                            personList: []
                         }
                     },
                     actualThings: [

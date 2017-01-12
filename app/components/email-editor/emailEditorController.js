@@ -8,31 +8,19 @@ define(
         return function emailEditorController($scope) {
             var vm = this;
 
-            vm.removeHighlightFeature = removeHighlightFeature;
-            vm.addHighlightFeature = addHighlightFeature;
-            vm.addHighlightMvt = addHighlightMvt;
-            vm.removeHighlightMvt = removeHighlightMvt;
             vm.getSumOfFinishedStories = getSumOfFinishedStories;
+            vm.addSimpleInputRow = addSimpleInputRow;
+            vm.removeSimpleInputRow = removeSimpleInputRow;
 
 
-            function removeHighlightFeature(index) {
-                vm.model.highlight.features.featureList.splice(index, 1);
-            }
-
-            function addHighlightFeature() {
-                vm.model.highlight.features.featureList.push({
+            function addSimpleInputRow(collection) {
+                collection.push({
                     text: ''
                 });
             }
 
-            function addHighlightMvt() {
-                vm.model.highlight.mvts.mvtList.push({
-                    text: ''
-                });
-            }
-
-            function removeHighlightMvt(index) {
-                vm.model.highlight.mvts.mvtList.splice(index, 1);
+            function removeSimpleInputRow(collection, itemIndex) {
+                collection.splice(itemIndex, 1);
             }
 
             function getSumOfFinishedStories() {
