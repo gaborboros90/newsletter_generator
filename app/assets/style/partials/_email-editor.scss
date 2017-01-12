@@ -26,6 +26,22 @@
             .panel-heading {
                 background-color: $primary-color;
             }
+
+            .panel-body {
+                .sum-story-container {
+                    > div {
+                        margin: 60px 0 0 40px;
+
+                        * {
+                            display: inline-block;
+                        }
+
+                        .sum-of-stories-value {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

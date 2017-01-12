@@ -24,20 +24,25 @@ define(
                         }
                     },
                     releaseStatistics: {
+                        title: 'Release statistics',
                         finishedStories: {
                             title: 'Finished stories',
-                            numbersByPod: [
+                            podStat: [
                                 {
-                                    'LPS1': 0,
+                                    name: 'LPS1',
+                                    value: 0
                                 },
                                 {
-                                    'LPS2': 0,
+                                    name: 'LPS2',
+                                    value: 0
                                 },
                                 {
-                                    'LPS3': 0,
+                                    name: 'LPS3',
+                                    value: 0
                                 },
                                 {
-                                    'LPS4': 0,
+                                    name: 'LPS4',
+                                    value: 0
                                 }
                             ],
                             sum: 0
