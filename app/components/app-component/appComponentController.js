@@ -71,16 +71,19 @@ define(
                             personList: []
                         }
                     },
-                    actualThings: [
-                        {
-                            title: '',
-                            imgData: ''
-                        },
-                        {
-                            title: '',
-                            imgData: ''
-                        }
-                    ]
+                    actualThings: {
+                        title: 'Actual things',
+                        list: [
+                            {
+                                title: '',
+                                images: [
+                                    {
+                                        src: ''
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
             };
         };
