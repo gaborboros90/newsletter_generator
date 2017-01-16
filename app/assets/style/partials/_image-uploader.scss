@@ -1,0 +1,35 @@
+@import "mixins";
+@import "variables";
+
+.uploaded-things {
+    .add-image {
+        .btn-file {
+            position: relative;
+            overflow: hidden;
+            width: 160px;
+            height: 160px;
+            background-size: 160px 160px;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-size: 52px;
+            color: black;
+            line-height: 160px;
+
+            input[type=file] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                min-width: 100%;
+                min-height: 100%;
+                font-size: 100px;
+                text-align: right;
+                filter: alpha(opacity=0);
+                opacity: 0;
+                outline: none;
+                background: white;
+                cursor: inherit;
+                display: block;
+            }
+        }
+    }
+}

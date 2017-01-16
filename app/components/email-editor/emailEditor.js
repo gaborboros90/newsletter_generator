@@ -1,7 +1,8 @@
 define([
     'angular',
-    './emailEditorController'
-], function (angular, emailEditorController) {
+    './emailEditorController',
+    '../image-uploader/imageUploader'
+], function (angular, emailEditorController, imageUploader) {
     'use strict';
 
     return angular.module('newsletterExporter.emailEditor', [])
@@ -13,5 +14,6 @@ define([
                 model: '='
             }
         })
+        .directive('imageUploader', imageUploader)
         .name;
 });

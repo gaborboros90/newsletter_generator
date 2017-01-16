@@ -11,6 +11,8 @@ define(
             vm.getSumOfFinishedStories = getSumOfFinishedStories;
             vm.addSimpleInputRow = addSimpleInputRow;
             vm.removeSimpleInputRow = removeSimpleInputRow;
+            vm.addNewActualThing = addNewActualThing;
+            vm.removeActualThing = removeActualThing;
 
 
             function addSimpleInputRow(collection) {
@@ -26,11 +28,26 @@ define(
             function getSumOfFinishedStories() {
                 var sumOfFinishedStories = 0;
 
-                vm.model.releaseStatistics.finishedStories.podStat.forEach(function(pod) {
+                vm.model.releaseStatistics.finishedStories.podStat.forEach(function (pod) {
                     sumOfFinishedStories += pod.value;
                 });
 
                 return sumOfFinishedStories;
+            }
+
+            function addNewActualThing() {
+                vm.model.actualThings.list.push({
+                    title: '',
+                    images: [
+                        {
+                            src: ''
+                        }
+                    ]
+                });
+            }
+
+            function removeActualThing(itemIndex) {
+                vm.model.actualThings.list.splice(itemIndex, 1);
             }
         };
     }
