@@ -1,23 +1,13 @@
 define(['jquery'], function ($) {
     function imageUploader() {
         var imageUploaderController = function ($scope, $element, $attrs) {
-            var vm = angular.extend(this, {});
+            var vm = this;
 
             vm.deleteImage = deleteImage;
-            vm.hoverIn = hoverIn;
-            vm.hoverOut = hoverOut;
 
-            var deleteImage = function(index) {
-                vm.actualThing.images.splice(index,1);
-            };
-
-            var hoverIn = function() {
-                vm.hoverEdit = true;
-            };
-
-            var hoverOut = function() {
-                vm.hoverEdit = false;
-            };
+            function deleteImage(index) {
+                vm.actualThing.images.splice(index, 1);
+            }
         };
 
         var linkFunction = function ($scope, $element, $attrs) {
@@ -25,7 +15,7 @@ define(['jquery'], function ($) {
                 var reader = new FileReader(),
                     file = $element.find('.upload-input')[0].files[0];
 
-                reader.addEventListener('load', function () {
+                reader.addEventListener('loadend', function () {
                     $scope.vm.actualThing.images.push({
                         src: reader.result
                     });

@@ -15,12 +15,18 @@
         position: relative;
 
         .overlay {
-            display: none;
+            cursor: pointer;
             position: absolute;
+            opacity: 0;
             width: 130px;
             height: 145px;
             top: 0;
             background-color: rgba(0,0,0,0.8);
+            transition: opacity .6s;
+
+            &:hover {
+                opacity: 1;
+            }
 
             .delete-image {
                 top: 50%;

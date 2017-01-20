@@ -2,7 +2,7 @@ var liveServer = require("live-server");
 
 var params = {
     port: 8181,
-    host: "ephuszew0146",
+    host: "gabesz",
     root: "./app",
     open: true,
     wait: 1000,
