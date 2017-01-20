@@ -1,12 +1,17 @@
-<div class="form-group row uploaded-things">
-    <div class="already-added-images col-xs-2" ng-repeat="image in vm.actualThing.images track by $index">
-        <!--<button class="btn btn-danger"><span-->
-            <!--class="glyphicon glyphicon-remove"></span></button>-->
-        <img ng-src="{{image.src}}" width="130" height="145" alt="" />
+<div class="uploaded-things">
+    <div class="already-added-images" ng-repeat="image in vm.actualThing.images track by $index"
+         ng-mouseover="$parent.vm.hoverIn()"
+         ng-mouseleave="$parent.vm.hoverOut()">
+        <img ng-src="{{image.src}}" width="130" height="145" alt=""/>
+
+        <div class="overlay" ng-click="vm.deleteImage($index)">
+            <span class="glyphicon glyphicon-trash delete-image"></span>
+        </div>
     </div>
-    <div class="add-image row col-xs-2">
+    <div class="add-image">
         <label class="btn btn-success btn-file">
-            <span class="glyphicon glyphicon-plus-sign"></span> <input type="file" style="display: none;">
+            <span class="glyphicon glyphicon-plus-sign"></span> <input type="file" style="display: none;"
+                                                                       class="upload-input">
         </label>
     </div>
 </div>

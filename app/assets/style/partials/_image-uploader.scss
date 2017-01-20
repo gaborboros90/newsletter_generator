@@ -3,11 +3,33 @@
 
 .uploaded-things {
     padding-right: 10px;
+    margin-bottom: 20px;
     background-color: darkgrey;
     border-bottom: 1px dashed $primary-color;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 
     .already-added-images {
-        margin: 10px 0;
+        margin: 10px;
+        position: relative;
+
+        .overlay {
+            display: none;
+            position: absolute;
+            width: 130px;
+            height: 145px;
+            top: 0;
+            background-color: rgba(0,0,0,0.8);
+
+            .delete-image {
+                top: 50%;
+                left: 50%;
+                color: white;
+                font-size: 24px;
+                transform: translate(-50%, -50%);
+            }
+        }
 
         img {
             border-radius: 4px;
@@ -16,9 +38,9 @@
     }
 
     .add-image {
-        width: 160px;
+        width: 130px;
         height: 160px;
-        margin: 10px 0;
+        margin: 10px;
 
         .btn-file {
             position: relative;
