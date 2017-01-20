@@ -12,19 +12,26 @@ define(['jquery'], function ($) {
 
         var linkFunction = function ($scope, $element, $attrs) {
             $element.find('.upload-input').on('change', function (event) {
-                var reader = new FileReader(),
-                    file = $element.find('.upload-input')[0].files[0];
+                var files = $element.find('.upload-input')[0].files;
 
-                reader.addEventListener('loadend', function () {
-                    $scope.vm.actualThing.images.push({
-                        src: reader.result
-                    });
+                function readAndPreview(file) {
+                    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+                        var reader = new FileReader();
 
-                    $scope.$apply();
-                }, false);
+                        reader.addEventListener('load', function () {
+                            $scope.vm.actualThing.images.push({
+                                src: this.result
+                            });
 
-                if (file) {
-                    reader.readAsDataURL(file);
+                            $scope.$apply();
+                        }, false);
+
+                        reader.readAsDataURL(file);
+                    }
+                }
+
+                if (files) {
+                    [].forEach.call(files, readAndPreview);
                 }
             });
         };
