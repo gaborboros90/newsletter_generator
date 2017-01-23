@@ -73,12 +73,7 @@ define(
                     },
                     actualThings: {
                         title: 'Actual things',
-                        list: [
-                            {
-                                title: '',
-                                images: []
-                            }
-                        ]
+                        list: []
                     }
                 }
             };

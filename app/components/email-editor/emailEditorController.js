@@ -32,6 +32,8 @@ define(
                     sumOfFinishedStories += pod.value;
                 });
 
+                vm.model.releaseStatistics.finishedStories.sum = sumOfFinishedStories;
+
                 return sumOfFinishedStories;
             }
 

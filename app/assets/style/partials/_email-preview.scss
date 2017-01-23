@@ -4,4 +4,8 @@
     .tool-header {
         @include component-header();
     }
+
+    .email-preview-container {
+        margin: 10px 0;
+    }
 }
