@@ -11,8 +11,8 @@ define(['jquery'], function ($) {
         };
 
         var linkFunction = function ($scope, $element, $attrs) {
-            $element.find('.upload-input').on('change', function (event) {
-                var files = $element.find('.upload-input')[0].files;
+            $element.find('input').on('change', function (event) {
+                var files = $element.find('input')[0].files;
 
                 function readAndPreview(file) {
                     if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
