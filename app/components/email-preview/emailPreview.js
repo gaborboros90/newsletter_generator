@@ -1,7 +1,8 @@
 define([
     'angular',
-    './emailPreviewController'
-], function (angular, emailPreviewController) {
+    './emailPreviewController',
+    '../email-exporter/emailExporter'
+], function (angular, emailPreviewController, emailExporter) {
     'use strict';
 
     return angular.module('newsletterExporter.emailPreview', [])
@@ -13,5 +14,6 @@ define([
                 model: '='
             }
         })
+        .directive('emailExporter', emailExporter)
         .name;
 });

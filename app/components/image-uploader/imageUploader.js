@@ -15,7 +15,7 @@ define(['jquery'], function ($) {
                 var files = $element.find('.upload-input')[0].files;
 
                 function readAndPreview(file) {
-                    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+                    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
                         var reader = new FileReader();
 
                         reader.addEventListener('load', function () {
