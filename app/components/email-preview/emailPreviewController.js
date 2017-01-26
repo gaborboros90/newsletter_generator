@@ -8,7 +8,17 @@ define(
         return function emailPreviewController($scope) {
             var vm = this;
 
-            this.headerText = 'Email preview';
+            vm.getLinkText = getLinkText;
+
+            function getLinkText(href) {
+                var urlParts;
+
+                if(typeof href === 'string') {
+                    urlParts = href.split('/');
+
+                    return urlParts[urlParts.length - 1] + ': ';
+                }
+            }
         };
     }
 );

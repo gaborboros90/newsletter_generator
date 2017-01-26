@@ -16,17 +16,21 @@ define(
                         }
                     },
                     highlight: {
-                        title: 'Highlight',
+                        title: 'Highlights',
                         features: {
-                            title: 'Bigger features',
-                            featureList: [
-                                {
-                                    text: ''
-                                }
-                            ]
+                            title: 'Major features',
+                            groups: [{
+                                groupTitle: 'default',
+                                featureList: [
+                                    {
+                                        text: '',
+                                        link: ''
+                                    }
+                                ]
+                            }]
                         },
                         mvts: {
-                            title: 'New MVT-s',
+                            title: 'New MVTs',
                             mvtList: []
                         }
                     },
@@ -72,7 +76,7 @@ define(
                         }
                     },
                     actualThings: {
-                        title: 'Actual things',
+                        title: 'Social events during the release',
                         list: []
                     }
                 }

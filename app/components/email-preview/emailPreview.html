@@ -226,16 +226,19 @@
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
-                                                                        <tr>
-                                                                            <td style="padding:0cm 0cm 0cm 0cm;background:#30A0FC; color: #FFFFFF">
+                                                                        <tr ng-repeat="group in vm.model.highlight.features.groups">
+                                                                            <td style="padding:0cm 0cm 0cm 0cm; color: #FFFFFF">
                                                                                 <table class="MsoNormalTable" border="0"
                                                                                        cellspacing="0" cellpadding="0"
                                                                                        align="left"
-                                                                                       style="background:#30A0FC;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
+                                                                                       style="background:#30A0FC;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;margin-bottom: 10pt">
+                                                                                    <tr ng-if="group.groupTitle !== 'default'" style="height:22.5pt">
+                                                                                        <td style="background: #d41200;color: #ffffff; padding-left: 10pt;">{{group.groupTitle}}</td>
+                                                                                    </tr>
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
                                                                                             <ul style="padding-left: 23.5pt">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: white;" ng-repeat="feature in vm.model.highlight.features.featureList">{{feature.text}}</li>
+                                                                                                <li style="width: 160pt;word-wrap: break-word;color: white;" ng-repeat="feature in group.featureList"><a ng-href="{{feature.href}}" style="text-decoration: none" target="_blank">{{vm.getLinkText(feature.href)}}</a> {{feature.text}}</li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -291,7 +294,7 @@
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
                                                                                             <ul style="padding-left: 23.5pt">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: white;" ng-repeat="mvt in vm.model.highlight.mvts.mvtList">{{mvt.text}}</li>
+                                                                                                <li style="width: 160pt;word-wrap: break-word;color: white;" ng-repeat="mvt in vm.model.highlight.mvts.mvtList"><a ng-href="{{mvt.href}}" style="text-decoration: none" target="_blank">{{vm.getLinkText(mvt.href)}}</a> {{mvt.text}}</li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -661,12 +664,12 @@
                                                             <td style="padding:0cm 0cm 0cm 0cm">
                                                                 <div align="left">
                                                                     <table class="MsoNormalTable" border="0" cellspacing="0"
-                                                                           cellpadding="0" width="260"
-                                                                           style="width:195.0pt;border-collapse:collapse">
+                                                                           cellpadding="0"
+                                                                           style="border-collapse:collapse">
                                                                         <tr>
                                                                             <td style="padding:0cm 0cm 0cm 0cm;">
                                                                                 <p style="line-height:15.0pt"><span
-                                                                                    style="font-size:16pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">{{actualThing.title}}</span>
+                                                                                    style="font-size:14pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">{{actualThing.title}}</span>
                                                                                     <o:p></o:p>
                                                                                 </p>
                                                                             </td>

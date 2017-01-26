@@ -28,6 +28,24 @@
             }
 
             .panel-body {
+                .group-container {
+                    border-bottom: 2px dotted black;
+                    padding: 10px 0;
+
+                    .group-title {
+                        margin-bottom: 10px;
+
+                        label {
+                            font-size: 20px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+                .add-new-group {
+                    margin: 16px 0 0 16px;
+                }
+
                 .sum-story-container {
                     > div {
                         margin: 60px 0 0 40px;

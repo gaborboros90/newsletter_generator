@@ -28,19 +28,34 @@
     <div class="panel panel-primary feature-editor">
         <div class="panel-heading">{{vm.model.highlight.features.title}}</div>
         <div class="panel-body">
-            <form class="form-horizontal">
-                <div class="form-group" ng-repeat="feature in vm.model.highlight.features.featureList track by $index">
-                    <div class="col-xs-11">
-                        <input type="text" class="form-control" ng-model="feature.text">
+            <form class="form-horizontal group-container" ng-repeat="group in vm.model.highlight.features.groups track by $index">
+                <div class="row group-title" ng-if="group.groupTitle !== 'default'">
+                    <label class="col-sm-5" for="group-{{$index}}">Group title: </label>
+                    <div class="col-sm-5"> <input type="text" ng-model="group.groupTitle"  class="form-control" id="group-{{$index}}" placeholder="Feature group's title"></div>
+                    <button ng-click="vm.removeItemFromCollection($parent.vm.model.highlight.features.groups,$index)"
+                            class="btn btn-danger"><span
+                        class="glyphicon glyphicon-remove"></span></button>
+                </div>
+                <div class="form-group" ng-repeat="feature in group.featureList track by $index">
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" ng-model="feature.text" placeholder="Title of the feature">
                     </div>
-                    <button ng-click="vm.removeSimpleInputRow($parent.vm.model.highlight.features.featureList,$index)"
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" ng-model="feature.href" placeholder="Link">
+                    </div>
+                    <button ng-click="vm.removeItemFromCollection($parent.group.featureList,$index)"
                             class="btn btn-primary"><span
                         class="glyphicon glyphicon-remove"></span></button>
                 </div>
-                <button ng-click="vm.addSimpleInputRow($parent.vm.model.highlight.features.featureList)"
-                        class="btn btn-primary">Add new <span
+                <button ng-click="vm.addInputRowWithLink(group.featureList)"
+                        class="btn btn-primary">Add new feature <span
                     class="glyphicon glyphicon-plus-sign"></span></button>
             </form>
+            <div class="row">
+                <button ng-click="vm.addFeatureGroup()"
+                        class="btn btn-lg btn-danger add-new-group">Add new group <span
+                    class="glyphicon glyphicon-plus-sign"></span></button>
+            </div>
         </div>
     </div>
 
@@ -49,14 +64,17 @@
         <div class="panel-body">
             <form class="form-horizontal">
                 <div class="form-group" ng-repeat="mvt in vm.model.highlight.mvts.mvtList track by $index">
-                    <div class="col-xs-11">
-                        <input type="text" class="form-control" ng-model="mvt.text">
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" ng-model="mvt.text" placeholder="Title of the MVT">
                     </div>
-                    <button ng-click="vm.removeSimpleInputRow($parent.vm.model.highlight.mvts.mvtList,$index)"
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" ng-model="mvt.href" placeholder="Link">
+                    </div>
+                    <button ng-click="vm.removeItemFromCollection($parent.vm.model.highlight.mvts.mvtList,$index)"
                             class="btn btn-primary"><span
                         class="glyphicon glyphicon-remove"></span></button>
                 </div>
-                <button ng-click="vm.addSimpleInputRow($parent.vm.model.highlight.mvts.mvtList)"
+                <button ng-click="vm.addInputRowWithLink($parent.vm.model.highlight.mvts.mvtList)"
                         class="btn btn-primary">Add new <span
                     class="glyphicon glyphicon-plus-sign"></span></button>
             </form>
@@ -131,7 +149,7 @@
                         <input type="text" class="form-control" ng-model="person.text">
                     </div>
                     <button
-                        ng-click="vm.removeSimpleInputRow($parent.vm.model.anniversaries.birthdays.personList,$index)"
+                        ng-click="vm.removeItemFromCollection($parent.vm.model.anniversaries.birthdays.personList,$index)"
                         class="btn btn-primary"><span
                         class="glyphicon glyphicon-remove"></span></button>
                 </div>
@@ -152,7 +170,7 @@
                         <input type="text" class="form-control" ng-model="person.text">
                     </div>
                     <button
-                        ng-click="vm.removeSimpleInputRow($parent.vm.model.anniversaries.landingAnniversaries.personList,$index)"
+                        ng-click="vm.removeItemFromCollection($parent.vm.model.anniversaries.landingAnniversaries.personList,$index)"
                         class="btn btn-primary"><span
                         class="glyphicon glyphicon-remove"></span></button>
                 </div>

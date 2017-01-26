@@ -10,10 +10,23 @@ define(
 
             vm.getSumOfFinishedStories = getSumOfFinishedStories;
             vm.addSimpleInputRow = addSimpleInputRow;
-            vm.removeSimpleInputRow = removeSimpleInputRow;
+            vm.removeItemFromCollection = removeItemFromCollection;
             vm.addNewActualThing = addNewActualThing;
             vm.removeActualThing = removeActualThing;
+            vm.addInputRowWithLink = addInputRowWithLink;
+            vm.addFeatureGroup = addFeatureGroup;
 
+            function addFeatureGroup() {
+                vm.model.highlight.features.groups.push({
+                    groupTitle: '',
+                    featureList: [
+                        {
+                            text: '',
+                            link: ''
+                        }
+                    ]
+                });
+            }
 
             function addSimpleInputRow(collection) {
                 collection.push({
@@ -21,7 +34,14 @@ define(
                 });
             }
 
-            function removeSimpleInputRow(collection, itemIndex) {
+            function addInputRowWithLink(collection) {
+                collection.push({
+                    text: '',
+                    href: ''
+                });
+            }
+
+            function removeItemFromCollection(collection, itemIndex) {
                 collection.splice(itemIndex, 1);
             }
 
