@@ -226,7 +226,7 @@
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
-                                                                        <tr ng-repeat="group in vm.model.highlight.features.groups">
+                                                                        <tr ng-repeat="group in vm.model.highlight.features.groups" ng-if="!!group.featureList.length">
                                                                             <td style="padding:0cm 0cm 0cm 0cm; color: #FFFFFF">
                                                                                 <table class="MsoNormalTable" border="0"
                                                                                        cellspacing="0" cellpadding="0"
