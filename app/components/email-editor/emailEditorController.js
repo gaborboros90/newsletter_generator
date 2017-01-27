@@ -48,8 +48,8 @@ define(
             function getSumOfFinishedStories() {
                 var sumOfFinishedStories = 0;
 
-                vm.model.releaseStatistics.finishedStories.podStat.forEach(function (pod) {
-                    sumOfFinishedStories += pod.value;
+                vm.model.releaseStatistics.finishedStories.storyTypes.forEach(function (story) {
+                    sumOfFinishedStories += story.value;
                 });
 
                 vm.model.releaseStatistics.finishedStories.sum = sumOfFinishedStories;

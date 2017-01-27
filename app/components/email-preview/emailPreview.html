@@ -148,7 +148,7 @@
                                         <tr>
                                             <td width="270" style="width:202.5pt;">
                                                 <p align="right" style="text-align:right;line-height:22.5pt"><b><span
-                                                    style="font-size:10.5pt;font-family:Helvetica;color:white;mso-fareast-language:EN-US">{{vm.model.header.releaseInfo.title}}</span></b>
+                                                    style="font-size:10.5pt;font-family:Helvetica;color:white;mso-fareast-language:EN-US">&nbsp; </span></b>
                                                     <o:p></o:p>
                                                 </p>
                                             </td>
@@ -177,11 +177,24 @@
                 <td style="padding:0cm 0cm 0cm 0cm">
                     <div align="center">
                         <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="580"
-                               style="width:435.0pt;background:white;border-collapse:collapse">
-                            <tr style="height:.75pt">
-                                <td width="100%"
-                                    style="width:100.0%;background:#D8D4C6;padding:0cm 0cm 0cm 0cm;height:.75pt"></td>
+                               style="width:435.0pt;background:#ffffff;border-collapse:collapse">
+                            <tr>
+                                <td style="padding:0.4cm 0cm 0cm 0.4cm">
+                                    <img src="../../assets/images/header.png" width="548" height="160" style="border-radius: 4pt;" />
+                                </td>
                             </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%"
+               style="width:100.0%;background:#EAE8E0;border-collapse:collapse">
+            <tr>
+                <td style="padding:0cm 0cm 0cm 0cm">
+                    <div align="center">
+                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="580"
+                               style="width:435.0pt;background:white;border-collapse:collapse">
                             <tr style="height:7.5pt">
                                 <td width="100%" style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
                             </tr>
@@ -231,14 +244,14 @@
                                                                                 <table class="MsoNormalTable" border="0"
                                                                                        cellspacing="0" cellpadding="0"
                                                                                        align="left"
-                                                                                       style="background:#30A0FC;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;margin-bottom: 10pt">
+                                                                                       style="background:#F2F2F2;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;margin-bottom: 10pt">
                                                                                     <tr ng-if="group.groupTitle !== 'default'" style="height:22.5pt">
-                                                                                        <td style="background: #d41200;color: #ffffff; padding-left: 10pt;">{{group.groupTitle}}</td>
+                                                                                        <td style="background: #d41200;color: #ffffff; padding-left: 10pt;font-family: Helvetica;">{{group.groupTitle}}</td>
                                                                                     </tr>
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
                                                                                             <ul style="padding-left: 23.5pt">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: white;" ng-repeat="feature in group.featureList"><a ng-href="{{feature.href}}" style="text-decoration: none" target="_blank">{{vm.getLinkText(feature.href)}}</a> {{feature.text}}</li>
+                                                                                                <li style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica" ng-repeat="feature in group.featureList"><a ng-href="{{feature.href}}" style="text-decoration: none;font-family: Helvetica; font-weight: bold" target="_blank">{{vm.getLinkText(feature.href)}}</a> {{feature.text}}</li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -286,15 +299,15 @@
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="padding:0cm 0cm 0cm 0cm;background:#30A0FC; color: #FFFFFF">
+                                                                            <td style="padding:0cm 0cm 0cm 0cm;background:#F2F2F2; color: #FFFFFF">
                                                                                 <table class="MsoNormalTable" border="0"
                                                                                        cellspacing="0" cellpadding="0"
                                                                                        align="left"
-                                                                                       style="background:#30A0FC;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
+                                                                                       style="background:#F2F2F2;;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
                                                                                             <ul style="padding-left: 23.5pt">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: white;" ng-repeat="mvt in vm.model.highlight.mvts.mvtList"><a ng-href="{{mvt.href}}" style="text-decoration: none" target="_blank">{{vm.getLinkText(mvt.href)}}</a> {{mvt.text}}</li>
+                                                                                                <li style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica;" ng-repeat="mvt in vm.model.highlight.mvts.mvtList"><a ng-href="{{mvt.href}}" style="font-family: Helvetica;text-decoration: none;font-weight: bold" target="_blank">{{vm.getLinkText(mvt.href)}}</a> {{mvt.text}}</li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -369,7 +382,7 @@
                                                             <td width="108" valign="top"
                                                                 style="text-align: center;width:80.8pt;border:solid #BFBFBF 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><b><span
-                                                                    style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">PODs</span></b>
+                                                                    style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Story types</span></b>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
@@ -388,25 +401,25 @@
                                                                 </p>
                                                             </td>
                                                         </tr>
-                                                        <tr ng-repeat="pod in vm.model.releaseStatistics.finishedStories.podStat">
+                                                        <tr ng-repeat="storyType in vm.model.releaseStatistics.finishedStories.storyTypes">
                                                             <td width="108" valign="top"
                                                                 style="width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><span
-                                                                    style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{pod.name}}</span>
+                                                                    style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{storyType.name}}</span>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
                                                             <td width="108" valign="top"
                                                                 style="text-align: center;width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><span
-                                                                    style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{pod.value}}</span>
+                                                                    style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{storyType.value}}</span>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
-                                                            <td ng-if="$index === 0" width="108" valign="top" rowspan="{{vm.model.releaseStatistics.finishedStories.podStat.length}}"
+                                                            <td ng-if="$index === 0" width="108" valign="top" rowspan="{{vm.model.releaseStatistics.finishedStories.storyTypes.length}}"
                                                                 style="vertical-align: middle; text-align: center;width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><span
-                                                                    style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{vm.model.releaseStatistics.finishedStories.sum}}</span>
+                                                                    style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US"><strong>&Sigma;</strong> {{vm.model.releaseStatistics.finishedStories.sum}}</span>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
@@ -531,11 +544,11 @@
                                                                                 <table class="MsoNormalTable" border="0"
                                                                                        cellspacing="0" cellpadding="0"
                                                                                        align="left"
-                                                                                       style="background:#30A0FC;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
+                                                                                       style="background:#30A0FC;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;font-family: Helvetica;">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 23.5pt">
-                                                                                                <li style="width: 160pt; word-wrap: break-word; color: white;" ng-repeat="person in vm.model.anniversaries.birthdays.personList">{{person.text}}</li>
+                                                                                            <ul style="padding-left: 23.5pt;font-family: Helvetica;">
+                                                                                                <li style="width: 160pt; word-wrap: break-word; color: white;font-family: Helvetica;" ng-repeat="person in vm.model.anniversaries.birthdays.personList">{{person.text}}</li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -590,8 +603,8 @@
                                                                                        style="background:#30A0FC;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 23.5pt">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: white;" ng-repeat="person in vm.model.anniversaries.landingAnniversaries.personList">{{person.text}}</li>
+                                                                                            <ul style="padding-left: 23.5pt;font-family: Helvetica;">
+                                                                                                <li style="width: 160pt;word-wrap: break-word;color: white;font-family: Helvetica;" ng-repeat="person in vm.model.anniversaries.landingAnniversaries.personList">{{person.text}}</li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>

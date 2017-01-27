@@ -38,21 +38,17 @@ define(
                         title: 'Release statistics',
                         finishedStories: {
                             title: 'Finished stories',
-                            podStat: [
+                            storyTypes: [
                                 {
-                                    name: 'LPS1',
+                                    name: 'Feature',
                                     value: 0
                                 },
                                 {
-                                    name: 'LPS2',
+                                    name: 'Technical',
                                     value: 0
                                 },
                                 {
-                                    name: 'LPS3',
-                                    value: 0
-                                },
-                                {
-                                    name: 'LPS4',
+                                    name: 'QA',
                                     value: 0
                                 }
                             ],

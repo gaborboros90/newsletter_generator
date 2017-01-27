@@ -90,11 +90,11 @@
         <div class="panel-body row">
             <form class="form-horizontal col-sm-6">
                 <div class="form-group row"
-                     ng-repeat="pod in vm.model.releaseStatistics.finishedStories.podStat track by $index">
-                    <label for="{{pod.name}}" class="col-xs-6">{{pod.name}}: </label>
+                     ng-repeat="story in vm.model.releaseStatistics.finishedStories.storyTypes track by $index">
+                    <label for="{{story.name}}" class="col-xs-6">{{story.name}}: </label>
 
                     <div class="col-xs-6">
-                        <input type="number" class="form-control" ng-model="pod.value" id="{{pod.name}}">
+                        <input type="number" class="form-control" ng-model="story.value" id="{{story.name}}">
                     </div>
                 </div>
             </form>
