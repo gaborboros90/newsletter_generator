@@ -67,8 +67,12 @@
 
         a:visited, span.MsoHyperlinkFollowed {
             mso-style-priority: 99;
-            color: #954F72;
+            color: #00008b;
             text-decoration: underline;
+        }
+
+        a:active {
+            color: #00008b;
         }
 
         p {
@@ -277,15 +281,15 @@
                                                                                     </tr>
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 16pt;list-style-type: none;">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica"
-                                                                                                    ng-repeat="feature in group.featureList">
+                                                                                            <div style="margin-left: 16pt;list-style-type: none;" ng-repeat="feature in group.featureList">
+                                                                                                <p style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica">
                                                                                                     <a ng-href="{{feature.href}}"
                                                                                                        style="text-decoration: none;font-family: Helvetica; font-weight: bold;"
-                                                                                                       target="_blank">{{vm.getLinkText(feature.href)}}</a><br><span
-                                                                                                    style="padding-left: 16pt;">{{feature.text}}</span>
-                                                                                                </li>
-                                                                                            </ul>
+                                                                                                       target="_blank">{{vm.getLinkText(feature.href)}}</a>
+                                                                                                </p>
+                                                                                                <p
+                                                                                                    style="margin-left: 16pt;word-wrap: break-word;color: black;font-family: Helvetica">{{feature.text}}</p>
+                                                                                            </div>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </table>
@@ -342,15 +346,15 @@
                                                                                        style="background:#F2F2F2;;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 16pt; list-style-type: none;">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica;"
-                                                                                                    ng-repeat="mvt in vm.model.highlight.mvts.mvtList">
+                                                                                            <div style="width: 160pt;margin-left: 16pt;margin-top: 8pt; list-style-type: none;" ng-repeat="mvt in vm.model.highlight.mvts.mvtList">
+                                                                                                <p style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica;">
                                                                                                     <a ng-href="{{mvt.href}}"
                                                                                                        style="font-family: Helvetica;text-decoration: none;font-weight: bold"
-                                                                                                       target="_blank">{{vm.getLinkText(mvt.href)}}</a><br><span
-                                                                                                    style="padding-left: 16pt;">{{mvt.text}}</span>
-                                                                                                </li>
-                                                                                            </ul>
+                                                                                                       target="_blank">{{vm.getLinkText(mvt.href)}}</a>
+                                                                                                </p>
+                                                                                                <p
+                                                                                                    style="margin-left: 16pt;margin-top: 4pt;word-wrap: break-word;color: black;font-family: Helvetica">{{mvt.text}}</p>
+                                                                                            </div>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </table>
@@ -537,7 +541,7 @@
                                                                     <tr ng-repeat="resolution in bugClass.resolutionList" ng-if="!!resolution.raisedBugs || !!resolution.closedBugs">
                                                                         <td width="148" valign="top"
                                                                             rowspan="{{$parent.bugClass.resolutionList.length}}"
-                                                                            ng-if="$index === 0"
+                                                                            ng-if="$index === vm.getFirstVisibleResolutionIndex($parent.bugClass.resolutionList)"
                                                                             style="vertical-align: middle;text-align: center;width:80.85pt;border-top:none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
                                                                             <p style="line-height:18.0pt"><span
                                                                                 style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{$parent.bugClass.title}}</span>
@@ -675,12 +679,12 @@
                                                                                        style="background:#F2F2F2;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;font-family: Helvetica;">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 16pt;font-family: Helvetica; list-style-type: none;">
-                                                                                                <li style="width: 160pt; word-wrap: break-word; font-family: Helvetica;font-weight: bold;"
+                                                                                            <div style="margin-left: 16pt;font-family: Helvetica; list-style-type: none;">
+                                                                                                <p style="width: 160pt; word-wrap: break-word; font-family: Helvetica;font-weight: bold;"
                                                                                                     ng-repeat="person in vm.model.anniversaries.birthdays.personList">
                                                                                                     {{person.text}}
-                                                                                                </li>
-                                                                                            </ul>
+                                                                                                </p>
+                                                                                            </div>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </table>
@@ -737,12 +741,12 @@
                                                                                        style="background:#F2F2F2;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 16pt;font-family: Helvetica; list-style-type: none;">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;font-family: Helvetica;font-weight: bold;"
+                                                                                            <div style="margin-left: 16pt;font-family: Helvetica; list-style-type: none;">
+                                                                                                <p style="width: 160pt;word-wrap: break-word;font-family: Helvetica;font-weight: bold;"
                                                                                                     ng-repeat="person in vm.model.anniversaries.landingAnniversaries.personList">
                                                                                                     {{person.text}}
-                                                                                                </li>
-                                                                                            </ul>
+                                                                                                </p>
+                                                                                            </div>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </table>
