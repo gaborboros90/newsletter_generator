@@ -134,7 +134,7 @@
                                            width="280"
                                            style="width:210.0pt;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                         <tr>
-                                            <td width="270" style="width:202.5pt;padding:7.5pt 0cm 7.5pt 15.0pt">
+                                            <td width="270" style="width:202.5pt;padding:20pt 0cm 7.5pt 15.0pt">
                                                 <p class="MsoNormal"><span
                                                     style="font-size:12.0pt;mso-fareast-language:EN-GB"><img border="0"
                                                                                                              width="191"
@@ -152,11 +152,11 @@
                                            width="280"
                                            style="width:210.0pt;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                         <tr>
-                                            <td width="270" style="width:202.5pt;">
-                                                <p align="right" style="text-align:right;line-height:22.5pt"><b><span
+                                            <td width="270" style="width:202.5pt;padding-top: 6pt;">
+                                                <div align="right" style="text-align:right;line-height:22.5pt"><b><span
                                                     style="font-size:10.5pt;font-family:Helvetica;color:white;mso-fareast-language:EN-US">&nbsp; </span></b>
-                                                    <o:p></o:p>
-                                                </p>
+                                                    <img src="../../assets/images/logo.png" width="64" height="64" />
+                                                </div>
                                             </td>
                                             <td width="20" style="width:15.0pt;padding:0cm 0cm 0cm 0cm"></td>
                                         </tr>
@@ -281,14 +281,14 @@
                                                                                     </tr>
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <div style="margin-left: 16pt;list-style-type: none;" ng-repeat="feature in group.featureList">
+                                                                                            <div style="margin-left: 16pt;margin-top: 4pt;list-style-type: none;" ng-repeat="feature in group.featureList">
                                                                                                 <p style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica">
                                                                                                     <a ng-href="{{feature.href}}"
                                                                                                        style="text-decoration: none;font-family: Helvetica; font-weight: bold;"
                                                                                                        target="_blank">{{vm.getLinkText(feature.href)}}</a>
                                                                                                 </p>
                                                                                                 <p
-                                                                                                    style="margin-left: 16pt;word-wrap: break-word;color: black;font-family: Helvetica">{{feature.text}}</p>
+                                                                                                    style="margin-left: 16pt;margin-top: 4pt;word-wrap: break-word;color: black;font-family: Helvetica">{{feature.text}}</p>
                                                                                             </div>
                                                                                         </td>
                                                                                     </tr>
@@ -345,8 +345,8 @@
                                                                                        align="left"
                                                                                        style="background:#F2F2F2;;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                                                     <tr style="height:22.5pt">
-                                                                                        <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <div style="width: 160pt;margin-left: 16pt;margin-top: 8pt; list-style-type: none;" ng-repeat="mvt in vm.model.highlight.mvts.mvtList">
+                                                                                        <td style="padding:10.5pt 0pt 10.5pt 0pt;height:22.5pt;">
+                                                                                            <div style="width: 180pt;margin-left: 16pt;margin-top: 4pt;margin-right: 0pt;padding-right: 0pt;" ng-repeat="mvt in vm.model.highlight.mvts.mvtList">
                                                                                                 <p style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica;">
                                                                                                     <a ng-href="{{mvt.href}}"
                                                                                                        style="font-family: Helvetica;text-decoration: none;font-weight: bold"
