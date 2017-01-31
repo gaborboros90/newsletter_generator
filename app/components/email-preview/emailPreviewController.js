@@ -16,7 +16,7 @@ define(
                 if(typeof href === 'string') {
                     urlParts = href.split('/');
 
-                    return urlParts[urlParts.length - 1] + ': ';
+                    return urlParts[urlParts.length - 1];
                 }
             }
         };

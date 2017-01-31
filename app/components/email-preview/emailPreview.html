@@ -125,7 +125,8 @@
                                style="width:435.0pt;background:#F61900;border-collapse:collapse">
                             <tr>
                                 <td style="padding:0cm 0cm 0cm 0cm">
-                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" align="left"
+                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                           align="left"
                                            width="280"
                                            style="width:210.0pt;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                         <tr>
@@ -142,7 +143,8 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" align="right"
+                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                           align="right"
                                            width="280"
                                            style="width:210.0pt;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                         <tr>
@@ -180,7 +182,8 @@
                                style="width:435.0pt;background:#ffffff;border-collapse:collapse">
                             <tr>
                                 <td style="padding:0.4cm 0cm 0cm 0.4cm">
-                                    <img src="../../assets/images/header.png" width="540" height="180" style="width: 14.45cm;" />
+                                    <img src="../../assets/images/header.png" width="540" height="180"
+                                         style="width: 14.45cm;"/>
                                 </td>
                             </tr>
                         </table>
@@ -201,25 +204,31 @@
                             <tr>
                                 <td style="padding:0cm 0cm 0cm 0cm">
                                     <div align="center">
-                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="540"
+                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                               width="540"
                                                style="width:405.0pt;border-collapse:collapse">
                                             <tr>
                                                 <td>
                                                     <table>
                                                         <tr>
                                                             <td>
-                                                                <img src="../../assets/images/glyphicons-52-eye-open.png" width="31" height="17" style="margin-top: 6pt;" />
+                                                                <img
+                                                                    src="../../assets/images/glyphicons-52-eye-open.png"
+                                                                    width="31" height="17" style="margin-top: 6pt;"/>
                                                             </td>
                                                             <td>
-                                                                <h2 style="text-align:left;margin-left: 4pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">{{vm.model.highlight.title}}</h2>
+                                                                <h2 style="text-align:left;margin-left: 4pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">
+                                                                    {{vm.model.highlight.title}}</h2>
                                                             </td>
                                                         </tr>
                                                     </table>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;">
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                                <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;"
+                                                    ng-if="vm.model.highlight.features.groups.length > 0 || !!vm.model.highlight.features.groups[0].featureList.length">
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
                                                            align="left" width="260"
                                                            style="width:195.0pt;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                         <tr style="height:7.5pt">
@@ -229,7 +238,8 @@
                                                         <tr>
                                                             <td style="padding:0cm 0cm 0cm 0cm">
                                                                 <div align="center">
-                                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                                    <table class="MsoNormalTable" border="0"
+                                                                           cellspacing="0"
                                                                            cellpadding="0" width="260"
                                                                            style="width:195.0pt;border-collapse:collapse">
                                                                         <tr>
@@ -252,19 +262,29 @@
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
-                                                                        <tr ng-repeat="group in vm.model.highlight.features.groups" ng-if="!!group.featureList.length">
+                                                                        <tr ng-repeat="group in vm.model.highlight.features.groups"
+                                                                            ng-if="!!group.featureList.length">
                                                                             <td style="padding:0cm 0cm 0cm 0cm; color: #FFFFFF">
                                                                                 <table class="MsoNormalTable" border="0"
                                                                                        cellspacing="0" cellpadding="0"
                                                                                        align="left"
                                                                                        style="background:#F2F2F2;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;margin-bottom: 10pt">
-                                                                                    <tr ng-if="group.groupTitle !== 'default'" style="height:22.5pt">
-                                                                                        <td style="background: #d41200;color: #ffffff; padding-left: 10pt;font-family: Helvetica;">{{group.groupTitle}}</td>
+                                                                                    <tr ng-if="group.groupTitle !== 'default'"
+                                                                                        style="height:22.5pt">
+                                                                                        <td style="background: #d41200;color: #ffffff; padding-left: 10pt;font-family: Helvetica;">
+                                                                                            {{group.groupTitle}}
+                                                                                        </td>
                                                                                     </tr>
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 23.5pt">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica" ng-repeat="feature in group.featureList"><a ng-href="{{feature.href}}" style="text-decoration: none;font-family: Helvetica; font-weight: bold" target="_blank">{{vm.getLinkText(feature.href)}}</a> {{feature.text}}</li>
+                                                                                            <ul style="padding-left: 16pt;list-style-type: none;">
+                                                                                                <li style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica"
+                                                                                                    ng-repeat="feature in group.featureList">
+                                                                                                    <a ng-href="{{feature.href}}"
+                                                                                                       style="text-decoration: none;font-family: Helvetica; font-weight: bold;"
+                                                                                                       target="_blank">{{vm.getLinkText(feature.href)}}</a><br><span
+                                                                                                    style="padding-left: 16pt;">{{feature.text}}</span>
+                                                                                                </li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -278,7 +298,8 @@
                                                     </table>
                                                 </td>
                                                 <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;">
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
                                                            align="left" width="260"
                                                            style="width:195.0pt;border-collapse:collapse;margin-left: 16pt;margin-right:-2.25pt">
                                                         <tr style="height:7.5pt">
@@ -286,9 +307,11 @@
                                                                 style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;" ng-if="vm.model.highlight.mvts.mvtList.length">
+                                                            <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;"
+                                                                ng-if="vm.model.highlight.mvts.mvtList.length">
                                                                 <div align="center">
-                                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                                    <table class="MsoNormalTable" border="0"
+                                                                           cellspacing="0"
                                                                            cellpadding="0" width="260"
                                                                            style="width:195.0pt;border-collapse:collapse">
                                                                         <tr>
@@ -319,8 +342,14 @@
                                                                                        style="background:#F2F2F2;;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 23.5pt">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica;" ng-repeat="mvt in vm.model.highlight.mvts.mvtList"><a ng-href="{{mvt.href}}" style="font-family: Helvetica;text-decoration: none;font-weight: bold" target="_blank">{{vm.getLinkText(mvt.href)}}</a> {{mvt.text}}</li>
+                                                                                            <ul style="padding-left: 16pt; list-style-type: none;">
+                                                                                                <li style="width: 160pt;word-wrap: break-word;color: black;font-family: Helvetica;"
+                                                                                                    ng-repeat="mvt in vm.model.highlight.mvts.mvtList">
+                                                                                                    <a ng-href="{{mvt.href}}"
+                                                                                                       style="font-family: Helvetica;text-decoration: none;font-weight: bold"
+                                                                                                       target="_blank">{{vm.getLinkText(mvt.href)}}</a><br><span
+                                                                                                    style="padding-left: 16pt;">{{mvt.text}}</span>
+                                                                                                </li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -335,7 +364,8 @@
                                                     <p class="MsoNormal">&nbsp;
                                                         <o:p></o:p>
                                                     </p>
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
                                                            align="left"
                                                            style="border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                         <tr style="height:7.5pt">
@@ -354,7 +384,8 @@
                                 <td width="100%" style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
                             </tr>
                             <tr style="height:.75pt">
-                                <td width="100%" style="width:100.0%;background:#D8D4C6;padding:0cm 0cm 0cm 0cm;height:1pt"></td>
+                                <td width="100%"
+                                    style="width:100.0%;background:#D8D4C6;padding:0cm 0cm 0cm 0cm;height:1pt"></td>
                             </tr>
                             <tr style="height:7.5pt">
                                 <td width="100%" style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
@@ -374,49 +405,55 @@
                             <tr>
                                 <td style="padding:0cm 0cm 0cm 0cm">
                                     <div align="center">
-                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="540"
+                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                               width="540"
                                                style="width:405.0pt;border-collapse:collapse">
                                             <tr>
                                                 <td>
                                                     <table>
                                                         <tr>
                                                             <td>
-                                                                <img src="../../assets/images/glyphicons-42-charts.png" width="24" height="24" style="margin-top: 6pt;" />
+                                                                <img src="../../assets/images/glyphicons-42-charts.png"
+                                                                     width="24" height="24" style="margin-top: 6pt;"/>
                                                             </td>
                                                             <td>
-                                                                <h2 style="text-align:left;margin-left: 4pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">{{vm.model.releaseStatistics.title}}</h2>
+                                                                <h2 style="text-align:left;margin-left: 4pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">
+                                                                    {{vm.model.releaseStatistics.title}}</h2>
                                                             </td>
                                                         </tr>
                                                     </table>
                                                 </td>
                                             </tr>
                                             <tr style="height:7.5pt">
-                                                <td width="100%" style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
+                                                <td width="100%"
+                                                    style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
                                             </tr>
                                             <tr style="height:7.5pt">
-                                                <td width="100%" style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
+                                                <td width="100%"
+                                                    style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
                                             </tr>
                                             <tr style="height:7.5pt">
                                                 <td width="50%" style="padding:0cm 0cm 0cm 0cm;height:7.5pt">
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
                                                            style="border-collapse:collapse">
                                                         <tr>
                                                             <td width="108" valign="top"
-                                                                style="text-align: center;width:80.8pt;border:solid #BFBFBF 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                style="vertical-align:middle;text-align: center;width:80.8pt;border:solid #BFBFBF 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><b><span
-                                                                    style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Story types</span></b>
+                                                                    style="vertical-align:middle;text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Story types</span></b>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
                                                             <td width="108" valign="top"
-                                                                style="text-align: center;width:80.85pt;border:solid #BFBFBF 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                style="vertical-align:middle;text-align: center;width:80.85pt;border:solid #BFBFBF 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><b><span
                                                                     style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{vm.model.releaseStatistics.finishedStories.title}}</span></b>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
                                                             <td width="108" valign="top"
-                                                                style="text-align: center;width:80.85pt;border:solid #BFBFBF 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                style="vertical-align:middle;text-align: center;width:80.85pt;border:solid #BFBFBF 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><b><span
                                                                     style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Sum</span></b>
                                                                     <o:p></o:p>
@@ -425,20 +462,21 @@
                                                         </tr>
                                                         <tr ng-repeat="storyType in vm.model.releaseStatistics.finishedStories.storyTypes">
                                                             <td width="108" valign="top"
-                                                                style="width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                style="vertical-align:middle; text-align: center;width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><span
                                                                     style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{storyType.name}}</span>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
                                                             <td width="108" valign="top"
-                                                                style="text-align: center;width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                style="vertical-align:middle;text-align: center;width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><span
                                                                     style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{storyType.value}}</span>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
-                                                            <td ng-if="$index === 0" width="108" valign="top" rowspan="{{vm.model.releaseStatistics.finishedStories.storyTypes.length}}"
+                                                            <td ng-if="$index === 0" width="108" valign="top"
+                                                                rowspan="{{vm.model.releaseStatistics.finishedStories.storyTypes.length}}"
                                                                 style="vertical-align: middle; text-align: center;width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><span
                                                                     style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US"><strong>&Sigma;</strong> {{vm.model.releaseStatistics.finishedStories.sum}}</span>
@@ -448,39 +486,87 @@
                                                         </tr>
                                                     </table>
                                                 </td>
-                                                <td width="50%" style="padding:0cm 0cm 0cm 0cm;height:7.5pt; vertical-align: top;" valign="top">
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
-                                                           style="border-collapse:collapse">
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:0cm 0cm 0cm 0cm"></td>
+                                            </tr>
+                                            <tr style="height:7.5pt">
+                                                <td width="100%"
+                                                    style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
+                                                           style="border-collapse:collapse;margin-top: 12pt;border-left: solid #BFBFBF 1.0pt;">
                                                         <tr>
                                                             <td width="148" valign="top"
-                                                                style="text-align: center;width:80.8pt;border:solid #BFBFBF 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                style="vertical-align: middle;text-align: center;width:80.8pt;border:solid #BFBFBF 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                <p style="line-height:18.0pt"><b><span
+                                                                    style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Bug classification</span></b>
+                                                                    <o:p></o:p>
+                                                                </p>
+                                                            </td>
+                                                            <td width="148" valign="top"
+                                                                style="vertical-align: middle;text-align: center;width:80.85pt;border:solid #BFBFBF 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                <p style="line-height:18.0pt"><b><span
+                                                                    style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Resolution</span></b>
+                                                                    <o:p></o:p>
+                                                                </p>
+                                                            </td>
+                                                            <td width="148" valign="top"
+                                                                style="vertical-align: middle;text-align: center;width:80.85pt;border:solid #BFBFBF 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><b><span
                                                                     style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Raised bugs</span></b>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
                                                             <td width="148" valign="top"
-                                                                style="text-align: center;width:80.85pt;border:solid #BFBFBF 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                style="vertical-align: middle;text-align: center;width:80.85pt;border:solid #BFBFBF 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
                                                                 <p style="line-height:18.0pt"><b><span
-                                                                    style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Resolved bugs</span></b>
+                                                                    style="text-align: center;font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">Closed bugs</span></b>
                                                                     <o:p></o:p>
                                                                 </p>
                                                             </td>
                                                         </tr>
-                                                        <tr>
-                                                            <td width="148" valign="top"
-                                                                style="text-align: center;width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
-                                                                <p style="line-height:18.0pt"><span
-                                                                    style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{vm.model.releaseStatistics.bugRelatedStatistics.raisedBugs}}</span>
-                                                                    <o:p></o:p>
-                                                                </p>
-                                                            </td>
-                                                            <td width="148" valign="top"
-                                                                style="text-align: center;width:80.85pt;border-top:none;border-left:solid #BFBFBF 1.0pt;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
-                                                                <p style="line-height:18.0pt"><span
-                                                                    style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{vm.model.releaseStatistics.bugRelatedStatistics.resolvedBug}}</span>
-                                                                    <o:p></o:p>
-                                                                </p>
+                                                        <tr ng-repeat="bugClass in vm.model.releaseStatistics.bugRelatedStatistics.classifications">
+                                                            <td colspan="4">
+                                                                <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                                       cellpadding="0"
+                                                                       style="border-collapse:collapse;">
+                                                                    <tr ng-repeat="resolution in bugClass.resolutionList" ng-if="!!resolution.raisedBugs || !!resolution.closedBugs">
+                                                                        <td width="148" valign="top"
+                                                                            rowspan="{{$parent.bugClass.resolutionList.length}}"
+                                                                            ng-if="$index === 0"
+                                                                            style="vertical-align: middle;text-align: center;width:80.85pt;border-top:none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                            <p style="line-height:18.0pt"><span
+                                                                                style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{$parent.bugClass.title}}</span>
+                                                                                <o:p></o:p>
+                                                                            </p>
+                                                                        </td>
+                                                                        <td width="148" valign="top"
+                                                                            style="vertical-align: middle;text-align: center;width:80.85pt;border-top:none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                            <p style="line-height:18.0pt"><span
+                                                                                style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{resolution.text}}</span>
+                                                                                <o:p></o:p>
+                                                                            </p>
+                                                                        </td>
+                                                                        <td width="148" valign="top"
+                                                                            style="vertical-align: middle;text-align: center;width:80.85pt;border-top:none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                            <p style="line-height:18.0pt"><span
+                                                                                style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{resolution.raisedBugs}}</span>
+                                                                                <o:p></o:p>
+                                                                            </p>
+                                                                        </td>
+                                                                        <td width="148" valign="top"
+                                                                            style="vertical-align: middle;text-align: center;width:80.85pt;border-top:none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt">
+                                                                            <p style="line-height:18.0pt"><span
+                                                                                style="font-size:10.0pt;font-family:Helvetica;color:#666666;mso-fareast-language:EN-US">{{resolution.closedBugs}}</span>
+                                                                                <o:p></o:p>
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -506,10 +592,11 @@
                 </td>
             </tr>
         </table>
-        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%" ng-if="vm.model.anniversaries.birthdays.personList.length || vm.model.anniversaries.landingAnniversaries.personList.length"
+        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%"
+               ng-if="vm.model.anniversaries.birthdays.personList.length || vm.model.anniversaries.landingAnniversaries.personList.length"
                style="width:100.0%;background:#EAE8E0;border-collapse:collapse">
             <tr>
-                <td style="padding:0cm 0cm 0cm 0cm" >
+                <td style="padding:0cm 0cm 0cm 0cm">
                     <div align="center">
                         <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="580"
                                style="width:435.0pt;background:white;border-collapse:collapse">
@@ -523,25 +610,30 @@
                             <tr>
                                 <td style="padding:0cm 0cm 0cm 0cm">
                                     <div align="center">
-                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="540"
+                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                               width="540"
                                                style="width:405.0pt;border-collapse:collapse">
                                             <tr>
                                                 <td>
                                                     <table>
                                                         <tr>
                                                             <td>
-                                                                <img src="../../assets/images/glyphicons-1-glass.png" width="24" height="24" style="margin-top: 6pt;" />
+                                                                <img src="../../assets/images/glyphicons-1-glass.png"
+                                                                     width="24" height="24" style="margin-top: 6pt;"/>
                                                             </td>
                                                             <td>
-                                                                <h2 style="text-align:left;margin-left: 4pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">{{vm.model.anniversaries.title}}</h2>
+                                                                <h2 style="text-align:left;margin-left: 4pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">
+                                                                    {{vm.model.anniversaries.title}}</h2>
                                                             </td>
                                                         </tr>
                                                     </table>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;" ng-if="vm.model.anniversaries.birthdays.personList.length">
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                                <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;"
+                                                    ng-if="vm.model.anniversaries.birthdays.personList.length">
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
                                                            align="left" width="260"
                                                            style="width:195.0pt;border-collapse:collapse;margin-left:-2.25pt;margin-right:16pt;">
                                                         <tr style="height:7.5pt">
@@ -551,7 +643,8 @@
                                                         <tr>
                                                             <td style="padding:0cm 0cm 0cm 0cm">
                                                                 <div align="center">
-                                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                                    <table class="MsoNormalTable" border="0"
+                                                                           cellspacing="0"
                                                                            cellpadding="0" width="260"
                                                                            style="width:195.0pt;border-collapse:collapse">
                                                                         <tr>
@@ -582,8 +675,11 @@
                                                                                        style="background:#F2F2F2;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;font-family: Helvetica;">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 23.5pt;font-family: Helvetica;">
-                                                                                                <li style="width: 160pt; word-wrap: break-word; font-family: Helvetica;" ng-repeat="person in vm.model.anniversaries.birthdays.personList">{{person.text}}</li>
+                                                                                            <ul style="padding-left: 16pt;font-family: Helvetica; list-style-type: none;">
+                                                                                                <li style="width: 160pt; word-wrap: break-word; font-family: Helvetica;font-weight: bold;"
+                                                                                                    ng-repeat="person in vm.model.anniversaries.birthdays.personList">
+                                                                                                    {{person.text}}
+                                                                                                </li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -597,7 +693,8 @@
                                                     </table>
                                                 </td>
                                                 <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;">
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
                                                            align="left" width="260"
                                                            style="width:195.0pt;border-collapse:collapse;margin-right:-2.25pt">
                                                         <tr style="height:7.5pt">
@@ -605,9 +702,11 @@
                                                                 style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;" ng-if="vm.model.anniversaries.landingAnniversaries.personList.length">
+                                                            <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;"
+                                                                ng-if="vm.model.anniversaries.landingAnniversaries.personList.length">
                                                                 <div align="center">
-                                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                                    <table class="MsoNormalTable" border="0"
+                                                                           cellspacing="0"
                                                                            cellpadding="0" width="260"
                                                                            style="width:195.0pt;border-collapse:collapse">
                                                                         <tr>
@@ -638,8 +737,11 @@
                                                                                        style="background:#F2F2F2;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                                                     <tr style="height:22.5pt">
                                                                                         <td style="padding:10.5pt 13.5pt 10.5pt 0pt;height:22.5pt;">
-                                                                                            <ul style="padding-left: 23.5pt;font-family: Helvetica;">
-                                                                                                <li style="width: 160pt;word-wrap: break-word;font-family: Helvetica;" ng-repeat="person in vm.model.anniversaries.landingAnniversaries.personList">{{person.text}}</li>
+                                                                                            <ul style="padding-left: 16pt;font-family: Helvetica; list-style-type: none;">
+                                                                                                <li style="width: 160pt;word-wrap: break-word;font-family: Helvetica;font-weight: bold;"
+                                                                                                    ng-repeat="person in vm.model.anniversaries.landingAnniversaries.personList">
+                                                                                                    {{person.text}}
+                                                                                                </li>
                                                                                             </ul>
                                                                                         </td>
                                                                                     </tr>
@@ -654,7 +756,8 @@
                                                     <p class="MsoNormal">&nbsp;
                                                         <o:p></o:p>
                                                     </p>
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
                                                            align="left"
                                                            style="border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                         <tr style="height:7.5pt">
@@ -673,7 +776,8 @@
                                 <td width="100%" style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
                             </tr>
                             <tr style="height:.75pt">
-                                <td width="100%" style="width:100.0%;background:#D8D4C6;padding:0cm 0cm 0cm 0cm;height:1pt"></td>
+                                <td width="100%"
+                                    style="width:100.0%;background:#D8D4C6;padding:0cm 0cm 0cm 0cm;height:1pt"></td>
                             </tr>
                             <tr style="height:7.5pt">
                                 <td width="100%" style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
@@ -683,10 +787,11 @@
                 </td>
             </tr>
         </table>
-        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%" ng-if="vm.model.actualThings.list.length"
+        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%"
+               ng-if="vm.model.actualThings.list.length"
                style="width:100.0%;background:#EAE8E0;border-collapse:collapse">
             <tr>
-                <td style="padding:0cm 0cm 0cm 0cm" >
+                <td style="padding:0cm 0cm 0cm 0cm">
                     <div align="center">
                         <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="580"
                                style="width:435.0pt;background:white;border-collapse:collapse">
@@ -696,19 +801,21 @@
                             <tr>
                                 <td style="padding:0cm 0cm 0cm 0cm">
                                     <div align="center">
-                                        <img src="../../assets/images/glyphicons-738-pictures.png" width="24" height="24" style="float: left; margin-top: 2pt;margin-right: 2pt;margin-left:12pt;" />
-                                        <h2 style="text-align:left;margin-left: 12pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">{{vm.model.actualThings.title}}</h2>
-                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="540"
+                                        <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                               width="540"
                                                style="width:405.0pt;border-collapse:collapse">
                                             <tr>
                                                 <td>
                                                     <table>
                                                         <tr>
                                                             <td>
-                                                                <img src="../../assets/images/glyphicons-738-pictures.png" width="24" height="24" style="margin-top: 6pt;" />
+                                                                <img
+                                                                    src="../../assets/images/glyphicons-738-pictures.png"
+                                                                    width="24" height="24" style="margin-top: 6pt;"/>
                                                             </td>
                                                             <td>
-                                                                <h2 style="text-align:left;margin-left: 4pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">{{vm.model.actualThings.title}}</h2>
+                                                                <h2 style="text-align:left;margin-left: 4pt;font-size:22pt;font-family:Helvetica;color:#333333;mso-fareast-language:EN-US">
+                                                                    {{vm.model.actualThings.title}}</h2>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -716,7 +823,9 @@
                                             </tr>
                                             <tr>
                                                 <td style="padding:0cm 0cm 0cm 0cm;vertical-align: top;">
-                                                    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" ng-repeat="actualThing in vm.model.actualThings.list"
+                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                           cellpadding="0"
+                                                           ng-repeat="actualThing in vm.model.actualThings.list"
                                                            align="left" width="100%"
                                                            style="width:390.0pt;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                         <tr style="height:7.5pt">
@@ -726,7 +835,8 @@
                                                         <tr>
                                                             <td style="padding:0cm 0cm 0cm 0cm">
                                                                 <div align="left">
-                                                                    <table class="MsoNormalTable" border="0" cellspacing="0"
+                                                                    <table class="MsoNormalTable" border="0"
+                                                                           cellspacing="0"
                                                                            cellpadding="0"
                                                                            style="border-collapse:collapse">
                                                                         <tr>
@@ -756,8 +866,11 @@
                                                                                        align="left"
                                                                                        style="border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
                                                                                     <tr style="height:22.5pt">
-                                                                                        <td style="padding:0cm 13.5pt 0cm 5.5pt;height:22.5pt" ng-repeat="image in actualThing.images | limitTo:3">
-                                                                                            <img ng-src="{{image.src}}" width="130" height="145" />
+                                                                                        <td style="padding:0cm 13.5pt 0cm 5.5pt;height:22.5pt"
+                                                                                            ng-repeat="image in actualThing.images | limitTo:3">
+                                                                                            <img ng-src="{{image.src}}"
+                                                                                                 width="130"
+                                                                                                 height="145"/>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </table>
@@ -778,7 +891,8 @@
                                 <td width="100%" style="width:100.0%;padding:0cm 0cm 0cm 0cm;height:7.5pt"></td>
                             </tr>
                             <tr style="height:.75pt">
-                                <td width="100%" style="width:100.0%;background:#D8D4C6;padding:0cm 0cm 0cm 0cm;height:1pt"></td>
+                                <td width="100%"
+                                    style="width:100.0%;background:#D8D4C6;padding:0cm 0cm 0cm 0cm;height:1pt"></td>
                             </tr>
                         </table>
                     </div>

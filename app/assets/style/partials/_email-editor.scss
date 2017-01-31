@@ -61,5 +61,19 @@
                 }
             }
         }
+
+        .bug-related-stat {
+            .classification-title {
+                padding: 10px;
+                background: $background-group-color;
+                border-radius: 4px;
+            }
+
+            form {
+                .resolutions {
+                    display: none;
+                }
+            }
+        }
     }
 }
