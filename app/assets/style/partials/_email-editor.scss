@@ -59,6 +59,30 @@
                         }
                     }
                 }
+
+                .add-extras-with-image {
+                    padding-bottom: 10px;
+                    border-bottom:  2px dotted black;
+                }
+
+                .custom-field-container {
+                    margin-top: 10px;
+
+                    .custom-fields {
+                        padding: 10px 0;
+                        margin-bottom: 10px;
+                        border-bottom: 2px solid $background-group-color;
+
+                        .field-rows {
+                            margin: 10px 0;
+
+                            div:first-child {
+                                padding-left: 0;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
             }
         }
 

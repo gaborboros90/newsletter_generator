@@ -8,6 +8,13 @@ define(
         return function appComponentController($scope) {
             $scope.vm = {
                 model: {
+                    assets: {
+                        title: 'Assets',
+                        inputLabel: 'Assets PATH',
+                        localPath: localStorage.getItem('LandingNewsletter:localPath') ? localStorage.getItem('LandingNewsletter:localPath') : '',
+                        remotePath: '../../assets/images/',
+                        path: '../../assets/images/'
+                    },
                     header: {
                         title: 'Header',
                         releaseInfo: {
@@ -177,11 +184,18 @@ define(
                         }
                     },
                     actualThings: {
-                        title: 'Social events during the release',
-                        list: []
+                        title: 'Extras',
+                        listWithImages: [],
+                        customFields: []
                     }
                 }
             };
+
+            $scope.$watch('vm.model.assets.localPath', function (newValue, oldValue) {
+                if (newValue) {
+                    localStorage.setItem('LandingNewsletter:localPath', newValue);
+                }
+            });
         };
     }
 );

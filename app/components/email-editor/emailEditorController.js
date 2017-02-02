@@ -15,6 +15,8 @@ define(
             vm.removeActualThing = removeActualThing;
             vm.addInputRowWithLink = addInputRowWithLink;
             vm.addFeatureGroup = addFeatureGroup;
+            vm.addCustomFieldGroup = addCustomFieldGroup;
+            vm.addCustomFieldRow = addCustomFieldRow;
 
             function addFeatureGroup() {
                 vm.model.highlight.features.groups.push({
@@ -58,14 +60,33 @@ define(
             }
 
             function addNewActualThing() {
-                vm.model.actualThings.list.push({
+                vm.model.actualThings.listWithImages.push({
                     title: '',
                     images: []
                 });
             }
 
             function removeActualThing(itemIndex) {
-                vm.model.actualThings.list.splice(itemIndex, 1);
+                vm.model.actualThings.listWithImages.splice(itemIndex, 1);
+            }
+
+            function addCustomFieldGroup() {
+                vm.model.actualThings.customFields.push({
+                    title: '',
+                    fieldRows: [{
+                        text: '',
+                        hrefText: '',
+                        href: ''
+                    }]
+                });
+            }
+
+            function addCustomFieldRow(customFieldRowCollection) {
+                customFieldRowCollection.push({
+                    text: '',
+                    hrefText: '',
+                    href: ''
+                });
             }
         };
     }
