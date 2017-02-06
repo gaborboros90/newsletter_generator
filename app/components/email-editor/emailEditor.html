@@ -47,17 +47,21 @@
     <div class="panel panel-primary feature-editor">
         <div class="panel-heading">{{vm.model.highlight.features.title}}</div>
         <div class="panel-body">
-            <form class="form-horizontal group-container" ng-repeat="group in vm.model.highlight.features.groups track by $index">
+            <form class="form-horizontal group-container"
+                  ng-repeat="group in vm.model.highlight.features.groups track by $index">
                 <div class="row group-title" ng-if="group.groupTitle !== 'default'">
                     <label class="col-sm-5" for="group-{{$index}}">Group title: </label>
-                    <div class="col-sm-5"> <input type="text" ng-model="group.groupTitle"  class="form-control" id="group-{{$index}}" placeholder="Feature group's title"></div>
+
+                    <div class="col-sm-5"><input type="text" ng-model="group.groupTitle" class="form-control"
+                                                 id="group-{{$index}}" placeholder="Feature group's title"></div>
                     <button ng-click="vm.removeItemFromCollection($parent.vm.model.highlight.features.groups,$index)"
                             class="btn btn-danger"><span
                         class="glyphicon glyphicon-remove"></span></button>
                 </div>
                 <div class="form-group" ng-repeat="feature in group.featureList track by $index">
                     <div class="col-xs-5">
-                        <input type="text" class="form-control" ng-model="feature.text" placeholder="Title of the feature">
+                        <input type="text" class="form-control" ng-model="feature.text"
+                               placeholder="Title of the feature">
                     </div>
                     <div class="col-xs-5">
                         <input type="text" class="form-control" ng-model="feature.href" placeholder="Link">
@@ -132,9 +136,9 @@
     <div class="panel panel-primary bug-related-stat">
         <div class="panel-heading">{{vm.model.releaseStatistics.bugRelatedStatistics.title}}</div>
         <div class="panel-body row">
-            <form class="form-horizontal col-sm-12" ng-repeat="bugClass in vm.model.releaseStatistics.bugRelatedStatistics.classifications" ne-toggle>
-                <h3 class="classification-title group-header">{{bugClass.title}}</h3>
-                <div class="form-group row resolutions" ng-repeat="resolution in bugClass.resolutionList">
+            <form class="form-horizontal col-sm-12">
+                <div class="form-group row resolutions"
+                     ng-repeat="resolution in vm.model.releaseStatistics.bugRelatedStatistics.resolutionList track by $index">
                     <label class="col-xs-4">{{resolution.text}} </label>
 
                     <div class="col-xs-4">
@@ -203,35 +207,20 @@
     <div class="panel panel-primary actual-things">
         <div class="panel-heading">{{vm.model.actualThings.title}}</div>
         <div class="panel-body row">
-            <form class="form-horizontal col-xs-12"
-                  ng-repeat="actualThing in vm.model.actualThings.listWithImages track by $index">
-                <div class="form-group row">
-                    <label for="actual-thing-title-{{$index}}" class="col-xs-4">Actual thing's title or description</label>
-
-                    <div class="col-xs-6">
-                        <input type="text" ng-model="actualThing.title" class="form-control" id="actual-thing-title-{{$index}}">
-                    </div>
-                    <div class="col-xs-2">
-                        <button ng-click="vm.removeActualThing($index)" class="btn btn-danger">Remove <span
-                            class="glyphicon glyphicon-remove"></span></button>
-                    </div>
-                </div>
-                <image-uploader actual-thing="actualThing"></image-uploader>
-            </form>
-            <div class="col-xs-12 add-extras-with-image">
-                <button ng-click="vm.addNewActualThing()" class="btn btn-primary btn-sm">Add <span
-                    class="glyphicon glyphicon-plus-sign"></span></button>
-            </div>
             <div class="col-sm-12 custom-field-container">
-                <form ng-repeat="customField in vm.model.actualThings.customFields track by $index" class="custom-fields">
+                <form ng-repeat="customField in vm.model.actualThings.customFields track by $index"
+                      class="custom-fields">
                     <div class="form-group row">
                         <label for="custom-field-title-{{$index}}" class="col-xs-4">Custom field's title</label>
 
                         <div class="col-xs-5">
-                            <input type="text" ng-model="customField.title" class="form-control" id="custom-field-title-{{$index}}">
+                            <input type="text" ng-model="customField.title" class="form-control"
+                                   id="custom-field-title-{{$index}}">
                         </div>
                         <div class="col-xs-2">
-                            <button ng-click="vm.removeItemFromCollection($parent.vm.model.actualThings.customFields, $index)" class="btn btn-danger">Remove group <span
+                            <button
+                                ng-click="vm.removeItemFromCollection($parent.vm.model.actualThings.customFields, $index)"
+                                class="btn btn-danger">Remove group <span
                                 class="glyphicon glyphicon-remove"></span></button>
                         </div>
                     </div>
@@ -240,7 +229,8 @@
                             <input type="text" class="form-control" ng-model="fieldRow.text" placeholder="Text">
                         </div>
                         <div class="col-xs-4">
-                            <input type="text" class="form-control" ng-model="fieldRow.hrefText" placeholder="Link text">
+                            <input type="text" class="form-control" ng-model="fieldRow.hrefText"
+                                   placeholder="Link text">
                         </div>
                         <div class="col-xs-3">
                             <input type="text" class="form-control" ng-model="fieldRow.href" placeholder="Link">
@@ -255,6 +245,27 @@
                 </form>
                 <button ng-click="vm.addCustomFieldGroup()"
                         class="btn btn-primary">Add custom field group <span
+                    class="glyphicon glyphicon-plus-sign"></span></button>
+            </div>
+            <form class="form-horizontal col-xs-12 add-extras-with-image"
+                  ng-repeat="actualThing in vm.model.actualThings.listWithImages track by $index">
+                <div class="form-group row">
+                    <label for="actual-thing-title-{{$index}}" class="col-xs-4">Actual thing's title or
+                        description</label>
+
+                    <div class="col-xs-6">
+                        <input type="text" ng-model="actualThing.title" class="form-control"
+                               id="actual-thing-title-{{$index}}">
+                    </div>
+                    <div class="col-xs-2">
+                        <button ng-click="vm.removeActualThing($index)" class="btn btn-danger">Remove <span
+                            class="glyphicon glyphicon-remove"></span></button>
+                    </div>
+                </div>
+                <image-uploader actual-thing="actualThing"></image-uploader>
+            </form>
+            <div class="col-xs-12">
+                <button ng-click="vm.addNewActualThing()" class="btn btn-primary btn-sm">Add <span
                     class="glyphicon glyphicon-plus-sign"></span></button>
             </div>
         </div>

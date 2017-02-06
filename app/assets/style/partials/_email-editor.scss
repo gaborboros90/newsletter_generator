@@ -61,12 +61,13 @@
                 }
 
                 .add-extras-with-image {
-                    padding-bottom: 10px;
-                    border-bottom:  2px dotted black;
+                    padding-top: 10px;
+                    margin-top: 10px;
+                    border-top:  2px dotted black;
                 }
 
                 .custom-field-container {
-                    margin-top: 10px;
+                    margin-bottom: 10px;
 
                     .custom-fields {
                         padding: 10px 0;
@@ -91,12 +92,6 @@
                 padding: 10px;
                 background: $background-group-color;
                 border-radius: 4px;
-            }
-
-            form {
-                .resolutions {
-                    display: none;
-                }
             }
         }
     }

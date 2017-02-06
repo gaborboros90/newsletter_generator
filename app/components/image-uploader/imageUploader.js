@@ -26,12 +26,13 @@ define(['jquery'], function ($) {
                             $scope.$apply();
                         }, false);
 
+                        $(this).val('');
                         reader.readAsDataURL(file);
                     }
                 }
 
                 if (files) {
-                    [].forEach.call(files, readAndPreview);
+                    [].forEach.call(files, $.proxy(readAndPreview, this));
                 }
             });
         };

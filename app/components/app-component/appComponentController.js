@@ -63,111 +63,36 @@ define(
                         },
                         bugRelatedStatistics: {
                             title: 'Bug related statistics',
-                            classifications: [
+                            resolutionList: [
                                 {
-                                    title: 'New feature',
-                                    resolutionList: [
-                                        {
-                                            text: 'Fixed',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Working as designed',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Duplicated',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'User error',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Will not fix',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Cannot repro',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        }
-                                    ]
+                                    text: 'Fixed',
+                                    raisedBugs: 0,
+                                    closedBugs: 0
                                 },
                                 {
-                                    title: 'Regression',
-                                    resolutionList: [
-                                        {
-                                            text: 'Fixed',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Working as designed',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Duplicated',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'User error',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Will not fix',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Cannot repro',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        }
-                                    ]
+                                    text: 'Working as designed',
+                                    raisedBugs: 0,
+                                    closedBugs: 0
                                 },
                                 {
-                                    title: 'Production',
-                                    resolutionList: [
-                                        {
-                                            text: 'Fixed',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Working as designed',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Duplicated',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'User error',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Will not fix',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        },
-                                        {
-                                            text: 'Cannot repro',
-                                            raisedBugs: 0,
-                                            closedBugs: 0
-                                        }
-                                    ]
+                                    text: 'Duplicated',
+                                    raisedBugs: 0,
+                                    closedBugs: 0
+                                },
+                                {
+                                    text: 'User error',
+                                    raisedBugs: 0,
+                                    closedBugs: 0
+                                },
+                                {
+                                    text: 'Will not fix',
+                                    raisedBugs: 0,
+                                    closedBugs: 0
+                                },
+                                {
+                                    text: 'Cannot repro',
+                                    raisedBugs: 0,
+                                    closedBugs: 0
                                 }
                             ]
                         }
