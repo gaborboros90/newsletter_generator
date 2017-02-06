@@ -103,6 +103,17 @@
             </form>
         </div>
     </div>
+
+    <div class="panel panel-primary highlight-images">
+        <div class="panel-heading">{{vm.model.highlight.images.title}}</div>
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <image-uploader images="vm.model.highlight.images.list"></image-uploader>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 <div class="panel-group release-stat-editor" ne-toggle>
@@ -262,7 +273,7 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     </div>
                 </div>
-                <image-uploader actual-thing="actualThing"></image-uploader>
+                <image-uploader images="actualThing.imageList"></image-uploader>
             </form>
             <div class="col-xs-12">
                 <button ng-click="vm.addNewActualThing()" class="btn btn-primary btn-sm">Add <span

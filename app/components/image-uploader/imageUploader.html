@@ -1,5 +1,5 @@
-<div class="uploaded-things">
-    <div class="already-added-images" ng-repeat="image in vm.actualThing.images track by $index"
+<div class="image-uploader-container">
+    <div class="images" ng-repeat="image in vm.images track by $index"
          ng-click="vm.deleteImage($index)">
         <img ng-src="{{image.src}}" width="130" height="145" alt=""/>
 

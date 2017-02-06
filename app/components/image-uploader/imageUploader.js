@@ -6,7 +6,7 @@ define(['jquery'], function ($) {
             vm.deleteImage = deleteImage;
 
             function deleteImage(index) {
-                vm.actualThing.images.splice(index, 1);
+                vm.images.splice(index, 1);
             }
         };
 
@@ -19,7 +19,7 @@ define(['jquery'], function ($) {
                         var reader = new FileReader();
 
                         reader.addEventListener('load', function () {
-                            $scope.vm.actualThing.images.push({
+                            $scope.vm.images.push({
                                 src: this.result
                             });
 
@@ -40,7 +40,7 @@ define(['jquery'], function ($) {
         return {
             restrict: 'E',
             scope: {
-                actualThing: '='
+                images: '='
             },
             controller: imageUploaderController,
             controllerAs: 'vm',

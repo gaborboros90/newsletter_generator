@@ -1,7 +1,7 @@
 @import "mixins";
 @import "variables";
 
-.uploaded-things {
+.image-uploader-container {
     padding-right: 10px;
     margin-bottom: 20px;
     background-color: darkgrey;
@@ -10,7 +10,7 @@
     justify-content: flex-start;
     flex-wrap: wrap;
 
-    .already-added-images {
+    .images {
         margin: 10px;
         position: relative;
 

@@ -62,7 +62,7 @@ define(
             function addNewActualThing() {
                 vm.model.actualThings.listWithImages.push({
                     title: '',
-                    images: []
+                    imageList: []
                 });
             }
 

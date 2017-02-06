@@ -39,6 +39,10 @@ define(
                         mvts: {
                             title: 'New MVTs',
                             mvtList: []
+                        },
+                        images: {
+                            title: 'Images',
+                            list: []
                         }
                     },
                     releaseStatistics: {
@@ -116,7 +120,7 @@ define(
                 }
             };
 
-            $scope.$watch('vm.model.assets.localPath', function (newValue, oldValue) {
+            $scope.$watch('vm.model.assets.localPath', function (newValue) {
                 if (newValue) {
                     localStorage.setItem('LandingNewsletter:localPath', newValue);
                 }
