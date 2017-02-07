@@ -272,7 +272,7 @@
                                                                                 <table class="MsoNormalTable" border="0"
                                                                                        cellspacing="0" cellpadding="0"
                                                                                        align="left"
-                                                                                       style="background:#F2F2F2;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;margin-bottom: 10pt">
+                                                                                       style="width: 200pt;background:#F2F2F2;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt;margin-bottom: 10pt">
                                                                                     <tr ng-if="group.groupTitle !== 'default'"
                                                                                         style="height:22.5pt">
                                                                                         <td style="background: #d41200;color: #ffffff; padding-left: 10pt;font-family: Helvetica;">
@@ -378,6 +378,21 @@
                                                         </tr>
                                                     </table>
 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:0cm 0cm 0cm 0cm; color: #FFFFFF" colspan="2">
+                                                    <table class="MsoNormalTable" border="0"
+                                                           cellspacing="0" cellpadding="0"
+                                                           align="left"
+                                                           style="width: 100%;border-collapse:collapse;margin-left:-2.25pt;margin-right:-2.25pt">
+                                                        <tr style="height:22.5pt" ng-repeat="image in vm.model.highlight.images.list">
+                                                            <td style="padding:10pt 2pt 0pt 2pt;height:22.5pt; text-align: center">
+                                                                <img ng-src="{{image.src}}"
+                                                                     width="540" style="margin: 0 auto;" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                         </table>
