@@ -41,7 +41,7 @@ define(
                             mvtList: []
                         },
                         images: {
-                            title: 'Images',
+                            title: 'Speed metrics',
                             list: []
                         }
                     },
