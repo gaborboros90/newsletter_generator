@@ -33,7 +33,11 @@ define(
                                         text: '',
                                         link: ''
                                     }
-                                ]
+                                ],
+                                additionalLink: {
+                                    text: 'Others',
+                                    link: ''
+                                }
                             }]
                         },
                         mvts: {

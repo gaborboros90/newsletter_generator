@@ -73,6 +73,14 @@
                 <button ng-click="vm.addInputRowWithLink(group.featureList)"
                         class="btn btn-primary">Add new feature <span
                     class="glyphicon glyphicon-plus-sign"></span></button>
+                <div class="form-group row" style="margin-top: 10px;">
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" placeholder="Link text" ng-model="group.additionalLink.text">
+                    </div>
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" placeholder="Link url" ng-model="group.additionalLink.link">
+                    </div>
+                </div>
             </form>
             <div class="row">
                 <button ng-click="vm.addFeatureGroup()"
