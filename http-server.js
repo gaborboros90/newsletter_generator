@@ -1,13 +1,17 @@
-var liveServer = require("live-server");
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8182;
 
-var params = {
-    port: 8181,
-    host: "ephuszew0146",
-    root: "./app",
-    open: true,
-    wait: 1000,
-    mount: [['/components', './node_modules']],
-    logLevel: 2
-};
+app.use(express.static(__dirname + '/app'));
 
-liveServer.start(params);
+app.use(function(req, res) {
+    res.send('404: Page not Found', 404);
+});
+
+app.use(function(req, res) {
+    res.send('500: Internal Server Error', 500);
+});
+
+app.listen(port);
+
+console.log('Web server has been started on port ' + port);
