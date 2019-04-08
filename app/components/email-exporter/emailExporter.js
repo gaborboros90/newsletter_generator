@@ -1,6 +1,6 @@
 define(['jquery'], function ($) {
     function emailExporter() {
-        var linkFunction = function ($scope, $element, $attrs) {
+        var linkFunction = function ($scope) {
             var vm = $scope.vm;
 
             vm.exportToHTML = function () {
